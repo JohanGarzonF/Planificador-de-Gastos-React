@@ -34,6 +34,15 @@ h2 {
     font-size: 3rem;
 }
 
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+    h2 {
+        font-size: 2rem;
+    }
+}
+
 .sombra {
     box-shadow: 0px 9px 10px -10px rgba(0, 0, 0, 0.51);
     -webkit-box-shadow: 0px 9px 10px -10px rgba(0, 0, 0, 0.51);
@@ -241,6 +250,8 @@ main {
     display: flex;
     align-items: center;
     gap: 2rem;
+    flex-direction: column;
+    width: 90%;
 }
 .filtros label {
     font-size: 3rem;
@@ -254,6 +265,12 @@ main {
     border-radius: 1rem;
     text-align: center;
     background-color: var(--gris-claro);
+}
+
+@media (min-width: 768px) {
+    .filtros .campo{
+        flex-direction: row;
+    }
 }
 
 .listado-gastos {
@@ -292,6 +309,21 @@ main {
 
 .contenido-gasto img {
     width: 10rem;
+}
+
+@media (max-width: 768px) {
+    .gasto {
+        flex-direction: column;
+    }
+    .contenido-gasto {
+        flex-direction: column;
+        text-align: center;
+    }
+    .cantidad-gasto {
+        display: flex;
+        justify-content: end;
+        width: 100%;
+    }
 }
 
 .descripcion-gasto p {
@@ -384,6 +416,12 @@ body .modal {
 
 .modal label {
     text-align: left;
+}
+
+@media (max-width: 768px) {
+    .modal .formulario {
+        width: 80%;
+    }
 }
 
 .CircularProgressbar .CircularProgressbar-text {
